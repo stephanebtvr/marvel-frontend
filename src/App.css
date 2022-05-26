@@ -1,31 +1,23 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .App-logo {
-  height: 40vmin;
+  margin-top: 400px;
+
+  height: 15vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +27,367 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*Header*/
+.header {
+  height: 60px;
+  border-bottom: 1px solid #e9ebeb;
+  display: flex;
+
+  align-items: center;
+}
+
+.topbar {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header .topbar img {
+  height: 40px;
+}
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.menu-btn {
+  color: red;
+  width: 120px;
+  height: 40px;
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+  font-weight: 800;
+  font-size: 15px;
+  text-align: center;
+}
+.menu-btn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+/***Card persos**/
+.card {
+  width: 340px;
+  height: 340px;
+  padding: 10px 15px;
+
+  margin-right: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 1px 1px 5px rgb(216, 213, 213);
+  border-radius: 7px;
+}
+.card:hover {
+  border: red solid 2px;
+  background-color: rgba(255, 0, 0, 0.1);
+  cursor: pointer;
+}
+.paragraph {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 1px;
+}
+.description {
+  width: 340px;
+  height: 35px;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  text-align: left;
+  color: grey;
+  font-size: 15px;
+}
+.card img {
+  width: 340px;
+  height: 180px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icon-search {
+  color: red;
+  height: 25px;
+  margin-left: 15px;
+}
+.search input {
+  width: 440px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 10px;
+  border: red 3px solid;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: red;
+  font-weight: 800;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.ajout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btn-card {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 3px;
+}
+.btn-card:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  cursor: pointer;
+  color: red;
+}
+.ajout-comics {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.text-btn-empty-star {
+  color: grey;
+}
+.text-btn-full-star {
+  color: red;
+}
+.text-btn-empty-star:hover {
+  cursor: pointer;
+  color: red;
+  cursor: text("Ajouter aux favoris");
+}
+
+/*.home-banner-img {
+  height: 500px;
+  overflow: hidden;
+  padding-bottom: 1000px;
+}*/
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}*/
+
+/* .banner-title {
+ 
+  font-family: Smart Sans Std;
+  text-align: center;
+  
+  font-size: 5px;
+  color: white;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+} */
+
+footer {
+  text-align: center;
+  font-weight: 800;
+  height: 60px;
+  bottom: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.bloc-pagenav {
+  margin: 50px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.bloc-pagenav span {
+  margin: 0 15px 0px 15px;
+  cursor: pointer;
+}
+.comcharacter-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-character {
+  margin-top: 20px;
+  width: 400px;
+  border-radius: 6px;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user button {
+  margin-right: 10px;
+  background-color: white;
+  color: red;
+  border: red 2px solid;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 800;
+}
+.user button:hover {
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+.deconnexion {
+  margin-right: 10px;
+  background-color: red;
+  color: white;
+  border: red 2px solid;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 800;
+  text-align: center;
+}
+.deconnexion:hover {
+  background-color: white;
+  cursor: pointer;
+  color: red;
+}
+.login-container,
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-card,
+.signup-card {
+  width: 400px;
+  height: 400px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 1px 1px 5px rgb(216, 213, 213);
+  border-radius: 7px;
+}
+.signup-card .input-form,
+.login-card .input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup-area,
+.login-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-card h2,
+.login-card h2 {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.signup-container input,
+.login-container input {
+  border: none;
+  border-bottom: red solid 2px;
+  margin-bottom: 50px;
+  background-color: white;
+  height: 30px;
+}
+
+.signup-container input:active,
+.login-container input:active {
+  border: none;
+}
+
+.login-area input,
+.signup-area input {
+  border-bottom: none;
+  background-color: red;
+  color: white;
+  font-weight: 800;
+  border-radius: 6px;
+}
+.login-area input:hover,
+.signup-area input:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.favorites-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5%;
+  color: red;
+  text-align: center;
+}
+.favcharacter-container {
+  border-right: red 2px solid;
+  width: 50%;
+}
+
+.favcomics-container {
+  border-left: red 2px solid;
+  width: 50%;
+}
+.signup-area .btn-red:hover {
 }
